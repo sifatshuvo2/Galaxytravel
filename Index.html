@@ -1,0 +1,28 @@
+Build a complete, responsive, bug-free Enterprise ERP & Accounting Web Application for "GALAXY TRAVEL CONSULTANCY" (Tagline: "Your Journey, Our Priority[span_2](start_span)"[span_2](end_span)).
+
+1. COLOR PALETTE & UI THEME:
+- Strictly NO deep maroon color.
+- Use a Lite Premium look: 70% Soft Neutral Gray background (#e5e7eb / #f3f4f6), Executive Jet Black / Dark Slate sidebar (#0f172a / #000000), Cyan (#06b6d4), Amber Yellow/Gold (#f59e0b), and Light Olive (#55663d) accents.
+- Mobile-first responsive layout with a universal "Back" button in the top header.
+- Sidebar header must cleanly display the uploaded logo and agency name without repeating "CONSULTANCY" twice[span_3](start_span)[span_3](end_span).
+
+2. MULTI-USER AUTHENTICATION & ACCOUNT SWITCHING:
+- Full Login, Create New Account (Username, Password, Full Name, Designation), and an instant "Switch Account" selector on the login screen so users can switch between Admin and Staff accounts in one click.
+- Default Admin: username `admin`, password `1234`.
+- Persist user accounts and active session properly (connect to Supabase/Cloud DB if available, with full localStorage fallback and JSON Backup/Restore for cross-device Office PC usage).
+
+3. CORE MODULES & FEATURES:
+- Executive Dashboard: Real-time cards for Total Contract, Pax Received, Market Due, Supplier Payable, Expected Profit, Unified Cashbook Banner (Total Income, Total Expense, Net Cash in Hand), and clickable Visa Processing Pipeline.
+- Interactive Visa Categories: Filterable by Work Visa, Visit Visa, Student Visa, Umrah/Hajj, and Air Ticket/Other. Clicking any category card immediately filters and displays the passenger list for that category.
+- Passengers & Smart Filter: Search by Passenger Name or Passport Number. Status badges must use clean, single-line `whitespace-nowrap` pill badges (Cyan/Emerald/Amber tones—NO ugly multi-line black marks[span_4](start_span)[span_4](end_span)). Include Edit, Delete, and quick "Make Bill" actions per passenger.
+- Automated Cashbook Linking (Income & Expense):
+  * Whenever a passenger deposits money (during creation, edit, or billing), automatically log a detailed `Income` transaction in the Cashbook.
+  * Whenever a vendor/supply man is paid, automatically log a detailed `Expense` transaction in the Cashbook.
+  * Allow manual entry and deletion for extra office expenses/income.
+- Agent (B2B) & Supply Man Ledgers: Auto-calculate pax count, total bill/cost, paid, and due. Include a direct "+ Pay Vendor" button in the Supplier Ledger.
+- Setup & Profile Management: Add and Delete options for Visa Categories, Agents, and Supply Men. Include Company Logo uploader (Base64 persistent storage) and Profile Signatory settings.
+
+4. OFFICIAL MONEY RECEIPT (PRINT & IMAGE DOWNLOAD):
+- Perfectly aligned receipt layout with company logo, receipt number, date, passenger details, and a clean 3-column financial table (Total Contract, Previously Received, Today's Deposit, Total Paid, Current Balance Due).
+- Auto-Signature: Automatically place the logged-in user's (or custom profile's) cursive signature, Full Name, and Designation at the bottom right, aligned on a clean 3-column footer grid.
+- Include "Download Image (PNG via html2canvas)" for WhatsApp sharing and "Print / PDF" support.
